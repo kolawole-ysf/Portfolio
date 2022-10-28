@@ -1,0 +1,630 @@
+body{
+    color: white;
+    background-color: rgb(20, 20, 20);
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+   
+}
+header{
+    height: 100vh;
+    color: inherit;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+span{
+    color:rgb(6, 121, 136);
+}
+h1{
+    font-size: 42px;
+}
+h2{
+    font-size: 32px;
+    font-weight: 600;
+    padding:20px 0;
+}
+p{
+    font-size: 20px;
+    line-height: 36px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    line-height: 48px;
+    font-size: 20px;
+    color: lightgray;
+    padding: 4px;
+}
+section{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    
+    
+}
+.container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.section{
+    transform: translateX(-100%) scale(0);
+    background-color: inherit;
+    transition: all .5s ease-in;   
+}
+.sec-1{
+    display: none;
+    background-color: rgb(20, 20, 20);
+    transform: translateX(0) scale(1);
+}
+.sec-2{
+    display: none;
+    background-color: rgb(20, 20, 20);
+    transform: translateX(0) scale(1);
+}
+.sec-3{
+    display: none;
+    background-color: rgb(20, 20, 20);
+    transform: translateX(0) scale(1);
+}
+.sec-4{
+    display: none;
+    background-color: blue;
+    transform: translateX(0) scale(1);
+}
+.sec-5{
+    display: none;
+    background-color: rgb(20, 20, 20);
+    transform: translateX(0) scale(1);
+}
+.active{
+    display:block;
+    animation: scaleAnim 1s ease-in;
+}
+@keyframes scaleAnim{
+    0%{
+        transform: translateX(-100%) scaleX(0);
+    }
+    100%{
+        transform: translateX(0) scaleX(1);
+    }
+    
+}
+.controls{
+    min-height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    top: 50%;
+    right:3%;
+    transform: translateY(-50%);
+}
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px black;
+    margin: 10px 0;
+    background-color: rgb(44, 43, 43);
+    cursor: pointer;
+}
+.control i{
+    font-size: 16px;
+    color:white;
+}
+.active-btn{
+    background-color: rgb(6, 121, 136);
+    color: white;
+}
+/*-----------------Home Page---------------------------------*/
+.header{
+    display: flex;
+}
+.profile-image{
+    background-color:rgb(20, 20, 20);
+    box-shadow: 1px 1px 8px black;
+   }
+.profile-image,.display-image{
+    width:400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: fill;
+    background-position: center;
+    background-size: cover;
+}
+.profile-msg{
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    }
+
+.hire-btn{
+    padding: 16px 24px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgb(6, 121, 136);
+    border-radius: 4px;
+}
+.bg-display{
+    width: 800px;
+    position: absolute;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    left: -400px;
+    background-color: rgb(6, 121, 136);
+}
+.icons{
+    min-height: 30vh;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    top: 50%;
+    left:35%;
+    transform: translateY(-50%);
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px black;
+    margin: 10px 0;
+    background-color: rgb(6, 121, 136);
+    cursor: pointer;
+}
+.icon i{
+    font-size: 28px;
+    color:white;
+}
+
+/*-----------------About us Page---------------------------------*/
+.title{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+}
+.title h2{
+    font-size: 32px;
+}
+.about-msg{
+    width: 45%;
+    position: relative;
+}
+.tools-grid{
+    display: grid;
+    position: relative;
+    width:50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:20px;
+}
+.tool{
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 8px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .2s ease-in-out;
+}
+.tool:hover{
+    transform: translateY(-10px);
+}
+.about-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.about-icon i{
+    font-size: 100px;
+    color:white;
+}
+/*-----------------portfolio Page---------------------------------*/
+.portfolio-images{
+    width: 80%;
+    margin: auto;
+    display: grid;
+   
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 20px;
+}
+.portfolio-img{
+    width: 100%;
+    height:100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+.portfolio-img:hover .portfolio-src{
+    transform: translateY(0) scaleY(1);
+    animation: portfolioAnim .5s ease-in-out;
+    cursor: pointer;
+}
+@keyframes portfolioAnim {
+    0%{
+        transform: translateY(100%) scaleY(0)
+    }
+    100%{
+        transform: translateY(0) scaleY(1);
+    }
+}
+.portfolio-img, img{
+    width: 100%;
+    border-radius: 12px;
+}
+.portfolio-src{
+    position: absolute;
+    border-radius: 12px;
+    top:0;
+    left: 0;
+    background-color:rgb(6, 121, 136) ;
+    transform: translateY(100%) scaleY(0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio-src h4{
+    font-size: 24px;
+    font-weight: 600;
+}
+.portfolio-icons{
+    width: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.portfolio-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    text-align: center;
+    margin-right: 20px;
+    transition: all .3s ease-in-out;
+}
+.portfolio-icon:hover{
+    background-color:white;
+    color:black;
+    border-radius: 50%;
+}
+.portfolio-icon i{
+    font-size: 28px;
+    
+}
+/*-----------------Contact Us Page---------------------------------*/
+.contact-box{
+    width: 80%;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2,1fr);
+    margin: auto;
+    place-items: center;
+}
+.contact-form{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+form{
+    width: 100%;
+    margin-top:10%;
+}
+.form-group{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.form-group>input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color:beige;
+    border: 0;
+    outline: none;
+    background-color: rgba(48, 70, 70, 0.2);
+}
+.form-group:last-child > input{
+    background-color: rgb(6, 121, 136);
+}
+.contact-msg{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+    text-align: left;
+}
+.contact i{
+    font-size: 16px;
+    margin-right: 8px;
+}
+.social-icons{
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.social-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(48, 70, 70, 0.2);
+    text-align: center;
+    margin-right: 20px;
+    transition: all .3s ease-in-out;
+}
+.social-icon:hover{
+    background-color: white;
+    color:rgb(6, 121, 136);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+.social-icon i{
+    font-size: 20px;
+    margin-left: 6px;
+}
+
+/*-----------------Mobile Screen---------------------------------*/
+@media (max-width:900px){
+    header{
+        min-height: 100vh;
+        color: inherit;
+        overflow-y: auto;
+        }
+    section{
+        min-height: 100vh;
+        color: inherit;
+         }
+    .controls{
+        position: fixed;
+        z-index: 10;
+       flex-direction: row;
+       align-items: flex-end;
+       justify-content: center;
+       left: 0; 
+    }
+    .control{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 8px black;
+        margin:20px 10px;
+        background-color: rgb(44, 43, 43);
+        cursor: pointer;
+    }
+    .control i{
+        font-size: 16px;
+        color:white;
+    }
+    .active-btn{
+        background-color: rgb(6, 121, 136);
+        color: white;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 20px;
+        
+    }
+    .profile-image{
+        margin: 70px 0;
+    }
+    .profile-image,.display-image{
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: fill;
+    background-position: center;
+    background-size: cover;
+}
+.bg-display{
+    width: 400px;
+    position: absolute;
+    height: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    left: -200px;
+    background-color: rgb(6, 121, 136);
+}
+.profile-msg{
+    width: 90%; 
+}
+h1{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 36px;
+}
+li{
+    font-size: 16px;
+}
+.icons{
+    min-height: 30vh;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    top: 28%;
+    left:85%;
+    
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 8px black;
+    margin: 10px 0;
+    background-color: rgb(6, 121, 136);
+    cursor: pointer;
+}
+.icon i{
+    font-size: 16px;
+    color:white;
+}
+.title{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    position: relative;
+}
+h2{
+    font-size: 28px;
+}
+.container{
+    flex-direction: column;
+}
+.about-msg{
+    width: 100%;
+    position: relative;
+}
+
+.tools-grid{
+    display: grid;
+    position: relative;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+}
+.tool{
+  
+    border-radius: 12px;
+    box-shadow: 1px 1px 8px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.about-icon i{
+    font-size: 100px;
+    color:white;
+}
+.contact-box{
+    width: 100%;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr ifr;
+    margin: auto;
+    place-items: center;
+}
+.contact-form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 100%;
+    margin-top:10%;
+}
+.form-group{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+.form-group>input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color:beige;
+    border: 0;
+    outline: none;
+    background-color: rgba(48, 70, 70, 0.2);
+}
+.portfolio-images{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    padding: 20px;
+}
+}
