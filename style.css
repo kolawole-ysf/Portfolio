@@ -590,6 +590,42 @@ h2{
 .input-range{
     margin: auto;
 }
+.percent{
+    width: 10%;
+}
+.range{
+    width: 80%;
+    height: 3px;
+    position: relative;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+.range span{
+    top:0;
+    left:0;
+    position: absolute;
+    height: 3px;
+    background-color:rgb(6, 121, 136) ;
+}
+.html{
+    width: 80%;
+}
+.css3{
+    width: 90%;
+}
+.javascript{
+    width: 75%;
+}
+.react{
+    width: 70%;
+}
+.git{
+    width: 82%;
+}
+.figma{
+    width: 90%;
+}
 .about-msg{
     padding: 0;
 }
@@ -603,7 +639,7 @@ h2{
     cursor: pointer;
 }
 .about-icon i{
-    font-size: 80px;
+    font-size: 60px;
     color:white;
 }
 .contact-box{
