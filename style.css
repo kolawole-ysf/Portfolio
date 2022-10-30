@@ -590,12 +590,6 @@ h2{
 .input-range{
     margin: auto;
 }
-.input-range input{
-    width:85%;
-}
-.input-range label{
-    width:15%;
-}
 .about-msg{
     padding: 0;
 }
