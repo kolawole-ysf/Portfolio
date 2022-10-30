@@ -30,4 +30,6 @@ function pageNavigation(){
 }
 pageNavigation();
 
+//Contact form validation
+
 
