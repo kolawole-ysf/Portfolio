@@ -259,6 +259,7 @@ background-color:rgb(6, 121, 136) ;
     align-items: center;
     justify-content: center;
     transition: transform .2s ease-in-out;
+    background-color:rgba(48, 70, 70, 0.2);    
 }
 .tool:hover{
     transform: translateY(-10px);
@@ -503,6 +504,56 @@ form{
     font-size: 20px;
     margin-left: 6px;
 }
+/*-----------------Blogs Page---------------------------------*/
+.my-blogs{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.blog-card {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    background-color:rgba(48, 70, 70, 0.2) ;
+    margin: 0 30px 30px 0;
+}
+.blog-card:hover .blog-details{
+    background-color:rgb(6, 121, 136) ;
+    border-top: 3px solid white;
+    
+}
+.blog-card .blog-img,.imag{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+.imag{
+    border-radius: 0;
+}
+.blog-card .blog-details{
+    width: 100%;
+    height: 200px;
+    border-top: 3px solid rgb(6, 121, 136);
+}
+.blog-details h3{
+    font-size: 20px;
+    margin: 0;
+    padding: 10px;
+}
+.blog-details p{
+    font-size: 16px;
+    margin: 0;
+    padding: 0 10px;
+}
+
 
 /*-----------------Mobile Screen---------------------------------*/
 @media screen and (max-width:600px){
@@ -714,6 +765,18 @@ form{
     grid-template-columns: 1fr;
     grid-gap: 20px;
     padding: 10px 10px 100px 10px;
+}
+.my-blogs{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.blog-details h3{
+    font-size: 20px;
 }
 
 } 
