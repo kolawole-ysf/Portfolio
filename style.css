@@ -525,7 +525,7 @@ form{
 }
 .blog-card:hover .blog-details{
     background-color:rgb(6, 121, 136) ;
-    border-top: 3px solid white;
+    border-top: 5px solid white;
     
 }
 .blog-card .blog-img,.imag{
@@ -541,7 +541,7 @@ form{
 .blog-card .blog-details{
     width: 100%;
     height: 200px;
-    border-top: 3px solid rgb(6, 121, 136);
+    border-top: 5px solid rgb(6, 121, 136);
 }
 .blog-details h3{
     font-size: 20px;
