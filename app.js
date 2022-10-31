@@ -40,14 +40,61 @@ pageNavigation();
 
 //Contact form validation
 const myForm=document.querySelector('form');
-const nameInput=document.querySelector('.name').value;
-const subject=document.querySelector('.subject').value;
-const myMessage=document.querySelector('.message').value;
+const nameInput=document.querySelector('.name');
+const emailInput=document.querySelector('.email');
+const subject=document.querySelector('.subject');
+const myMessage=document.querySelector('.message');
 
-myForm.addEventListener('submit', (e)=>{
+myForm.addEventListener('submit', formValidation);
+
+function formValidation(e){
     e.preventDefault();
-    if(!(isNaN(nameInput)) && nameInput.length<3){
-
+    if(!(isNaN(nameInput.value)) || nameInput.value.length<3 || nameInput.value===''){
+        nameInput.classList.add('invalid');
+        setTimeout(()=>{
+            nameInput.classList.remove('invalid')
+        },5000);
+        console.log(nameInput.value);
+        return false;
     }
-})
+    if(emailInput.value===''){
+        emailInput.classList.add('invalid');
+        setTimeout(()=>{
+            emailInput.classList.remove('invalid')
+        },5000);
+        console.log(emailInput.value);
+        return false;
+    }
+    if(!(isNaN(subject.value)) || subject.value.length<2 || subject.value===''){
+        subject.classList.add('invalid');
+        setTimeout(()=>{
+            subject.classList.remove('invalid')
+        },5000);
+        console.log(subject.value);
+        return false;
+    }
+    if(!(isNaN(myMessage.value)) || myMessage.value===''){
+        nameInput.classList.add('invalid');
+        setTimeout(()=>{
+            myMessage.classList.remove('invalid')
+        },5000);
+        console.log(myMessage.value);
+        return false;
+    }
+    let msg='';
+        const alertMsg=document.querySelector('.alert');
+        msg+=`
+        <p>Thank you! ${nameInput.value} for contacting Bamstech. We will get back to you shortly </p>`
+        alertMsg.innerHTML=msg;
+        setTimeout(()=>{
+        alertMsg.remove();
+    },5000);
+
+    nameInput.value='';
+    emailInput.value='';
+    subject.value='';
+    myMessage.value='';
+}
+    
+
 
