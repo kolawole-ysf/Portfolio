@@ -376,7 +376,8 @@ background-color:rgb(6, 121, 136) ;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 0;
+    padding: 10px;
+   
 }
 .portfolio-icon{
     display: flex;
@@ -387,7 +388,7 @@ background-color:rgb(6, 121, 136) ;
     border-radius: 50%;
     background-color: black;
     text-align: center;
-    margin-right: 20px;
+    margin-right: 10px;
     transition: all .3s ease-in-out;
 }
 .portfolio-icon:hover{
@@ -530,10 +531,14 @@ form{
     .container{
         width: 100%;
         grid-template-columns: 1fr;
-        padding:20px 10px 100px 10px;
+        padding:20px 0px 100px 10px;
+        margin: 0;
     }
+
     .title h2{
         font-size: 28px;
+        margin: 0;
+        
     }
     .profile-image{
        margin: auto;
@@ -568,12 +573,14 @@ li{
 
 .title{
     width: 100%;
-    padding: 0;
+    padding: 10px;
+    margin:0;
     text-align: center;
     position: relative;
 }
 h2{
     font-size: 24px;
+    margin: 0;
 }
 .tools-grid{
     grid-template-columns: 1fr 1fr;
@@ -628,6 +635,7 @@ h2{
 }
 .about-msg{
     padding: 0;
+    width: 100%;
 }
 .about-icon{
     display: flex;
