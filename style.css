@@ -389,7 +389,7 @@ background-color:rgb(6, 121, 136) ;
     border-radius: 50%;
     background-color: black;
     text-align: center;
-    margin-right: 10px;
+    margin-right: 20px;
     transition: all .3s ease-in-out;
 }
 .portfolio-icon:hover{
