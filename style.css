@@ -365,6 +365,7 @@ background-color:rgb(6, 121, 136) ;
     top: 0;
     left: 0;
     transition: transform .5s ease-in-out;
+    overflow: hidden;
 }
 .portfolio-img:hover .portfolio-src{
     transform: translateY(0) scaleY(1);
