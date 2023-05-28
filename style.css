@@ -382,7 +382,9 @@ background-color:rgb(6, 121, 136) ;
 }
 .portfolio-img, img{
     width: 100%;
+    height: 250px;
     border-radius: 12px;
+    object-fit: cover;
 }
 .portfolio-src{
     position: absolute;
