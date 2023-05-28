@@ -317,7 +317,7 @@ background-color:rgb(6, 121, 136) ;
     width: 10%;
 }
 .range{
-    width: 80%;
+    width: 100%;
     height: 3px;
     position: relative;
     background-color: white;
@@ -332,19 +332,19 @@ background-color:rgb(6, 121, 136) ;
     background-color:rgb(6, 121, 136) ;
 }
 .html{
-    width: 80%;
+    width: 100%;
 }
 .css3{
-    width: 90%;
+    width: 100%;
 }
 .javascript{
-    width: 75%;
+    width: 100%;
 }
 .react{
-    width: 70%;
+    width: 100%;
 }
 .git{
-    width: 82%;
+    width: 100%;
 }
 .figma{
     width: 90%;
